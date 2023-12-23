@@ -1,0 +1,133 @@
+:root {
+    --color: hsl(257, 40%, 49%);
+    --color: hsl(300, 69%, 71%);
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+main {
+    width: 100%;
+    height: auto;
+    background-image: url(./bg-mobile.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+}
+main::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color:hsl(257, 40%, 49%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+main .box {
+    padding: 40px;
+}
+main .box .logo {
+    width: 200px;
+    max-width: 100%; 
+}
+main .box .content {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: 40px;
+}
+@media (min-width: 1200px){
+    main .box .content {
+        flex-wrap: nowrap;
+    }
+    main .box .content .image {
+        flex-basis: 60%;
+    }
+    main .box .content .discription {
+        flex-basis: 40%;
+    }
+}
+main .box .content .image img {
+    max-width: 100%;
+}
+main .box .content .discription {
+   
+}
+main .box .content .discription .head {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 28px;
+    text-transform: capitalize;
+    color: white;
+}
+@media (min-width: 1200px) {
+    main .box .content .discription .head {
+        font-size: 40px;
+        text-align: left;
+    }
+}
+main .box .content .discription .details {
+    color: white;
+    text-align: center;
+    font-size: 17px;
+}
+@media (min-width: 1200px) {
+    main .box .content .discription .details {
+        text-align: left;
+        font-size: 16px;
+    }
+}
+main .box .content .discription button {
+    display: block;
+    width: fit-content;
+    padding: 15px 100px;
+    margin: 20px auto;
+    background-color: white;
+    color:hsl(257, 40%, 49%);
+    font-family: sans-serif;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 10px 10px 5px hsl(257, 50%, 50%);
+    transition: 0.1s;
+}
+@media (min-width: 1200px) {
+    main .box .content .discription button {
+        margin-left: 0;
+        padding: 15px 60px;
+    }
+}
+main .box .content .discription button:active {
+    color: white;
+    background-color:hsl(300, 69%, 71%);
+}
+main .box .social {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+@media (min-width: 1200px) {
+    main .box .social {
+        justify-content: flex-end;
+    }
+}
+main .box .social i {
+  font-size: 20px;
+  color: white;
+  width: 40px;
+  height:40px;
+  margin-top: 50px;
+  margin-right: 10px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
